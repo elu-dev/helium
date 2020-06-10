@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "backend": "node ./backend/server-starter.js",
-    "frontend": "webpack --mode=production"
+    "frontend": "webpack --mode=production & python -m http.server --directory ./frontend/public"
   },
   "keywords": [],
   "author": "",

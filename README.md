@@ -1,4 +1,4 @@
-# TODO: cool title
+# Helium
 
 Social network structured as a set of micro-services
 

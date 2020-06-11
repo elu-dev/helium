@@ -1,8 +1,7 @@
 const gateway = require('./services/gateway/gateway')
 const front = require('./services/front-server/front-server')
 
-let port = 3000
-let log = name => console.log(`${name} started on port ${port++ - 2}`)
+let log = (name, port) => console.log(`${name} started on port ${port}`)
 
-gateway.listen(port, _ => log('gateway')) ; port++
-front.listen(port, _ => log('front')); port++
+front.listen(8000, _ => log('front', 8000))
+gateway.listen(3000, _ => log('gateway', 3000))

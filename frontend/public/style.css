@@ -1,21 +1,38 @@
-body { color: #428989; }
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap);
+
+html, body {
+    color: #428989;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, Helvetica;
+    overflow-x: hidden;
+}
+
 
 #bg {
-    background-image: linear-gradient(-45deg, #8EDFFF, #BEFDF9);
+    background-image: linear-gradient(-45deg,#8EDFFF, #BEFDF9);
     position: fixed;
     width: 100vw;
     height: 100vh;
+    z-index: -1;
 }
 
+p {
+    margin: 0;
+}
+
+
 #logo {
+    position:relative;
+    width:100%;
     text-align: center;
     padding: 10px 0;
 }
 #logo span {
+    color: #428989;
     font-size: 3em;
     letter-spacing: 1em;
 }
-
 #logo img {
     font-size: 3em;
     height: 1.2em;
@@ -25,8 +42,65 @@ body { color: #428989; }
     top: 0.2em;
 }
 
-.nav {
-    background-color: white;
+
+.container {
+    /* background-color: #fff; */
+    margin: 0 auto;
+    width: min(60em, 100vw);
+}
+
+.static-bar {
+    margin: 0 auto;
+    position: fixed;
+    width: calc(min(60em, 100vw));
+    overflow: hidden;
+    padding: 10px 0;
+
+}
+
+.blob {
+    margin: 0 auto;
+    width: calc(100% - 30px);
+    background-color: #fffc;
     border-radius: 10px;
     padding: 10px;
+    position: relative;
+    box-shadow: 0 0 10px #0003;
+}
+
+
+
+#nav {
+    position: relative;
+    float: left;
+    width: min(20%, 224px);
+}
+
+#content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#content .blob {
+    margin-top: 10px;
+}
+
+#content .blob:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#trends {
+    float: right;
+    width: min(20%, 224px);
+}
+
+@media screen and (max-width: 700px) {
+    #logo {
+        font-size: 9px;
+    }
+
+    #nav { width: 30% }
+    #content { width: 70%; margin-left: 30%; }
+    #trends { display: none }
 }

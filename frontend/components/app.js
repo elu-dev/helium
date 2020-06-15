@@ -1,56 +1,24 @@
 import React from 'react'
 
+import Logo from './logo'
+import Nav from './nav'
+import Trends from './trends'
+import Content from './content'
+
 export default class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <div id="logo">
-                    <img src="/icons/logo.png" alt="Helium logo"/>
-                    <span>Helium</span>
-                </div>
+
+                <Logo />
 
                 <div className="static-bar">
-                    <div id="nav">
-                        <div className="blob">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                        </div>
-                    </div>
-
-                    <div id="trends">
-                        <div className="blob">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                        </div>
-                    </div>
+                    <Nav />
+                    <Trends />
                 </div>
 
+                <Content />
                 
-
-                <div id="content">
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                    <div className="blob">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
-                    </div>
-                </div>
             </div>
         )
     }

@@ -1,29 +1,22 @@
 import React from 'react'
 import Post from './post'
+import STATE from './_global'
 
 export default class Feed extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            posts: [
-                {
-                    userID: "test",
-                    imgURL: "http://localhost:3001/img/test.jpg",
-                    comment: "Moon <3"
-                }
-            ]
-        }
+    }
+
+    changer() {
+        STATE.posts[0].comment = 'omg it works!'
+        this.forceUpdate()
     }
 
     render() {
         return (
             <div id="feed">
-                {
-                    this.state.posts.map(post => {
-                        console.log(post);
-                        return <Post userID={post.userID} imgURL={post.imgURL} comment={post.comment} />
-                    })
-                }
+            <button onClick={this.changer.bind(this)}>Do Something</button>
+                { STATE.posts.map(post => <Post userID={post.userID} imgURL={post.imgURL} comment={post.comment} />) }
             </div>
         )
     }

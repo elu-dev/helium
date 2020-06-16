@@ -14,7 +14,7 @@ html, body {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: -2;
 }
 
 p {
@@ -55,7 +55,7 @@ p {
     width: calc(min(60em, 100vw));
     overflow: hidden;
     padding: 10px 0;
-
+    z-index: -1;
 }
 
 .blob {

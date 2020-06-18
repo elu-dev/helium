@@ -1,6 +1,7 @@
 import React from 'react'
 import Post from './post'
 import STATE from './_global'
+import NewPost from './newpost'
 
 export default class Feed extends React.Component {
     constructor(props) {
@@ -16,6 +17,7 @@ export default class Feed extends React.Component {
         return (
             <div id="feed">
             {/* <button onClick={this.changer.bind(this)}>Do Something</button> */}
+            { STATE.user ? <NewPost /> : '' }
                 { STATE.posts.map(post => <Post userID={post.userID} imgURL={post.imgURL} comment={post.comment} />) }
             </div>
         )

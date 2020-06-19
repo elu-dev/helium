@@ -3,14 +3,14 @@
 Social network structured as a set of micro-services
 
 Topics I want to cover:
-- Microservice Architecture
-- API Authentication through web tokens
-- Scalability
-- Testing
-- Cache
+- Microservice Architecture `(picture below)` ✔️
+- API Authentication `(jwt)`
+- Cache `(redis)`
+- Testing `(jest)`
+- Scalability `(docker + kubernetes)`
 
 
-## Microservices
+## Architecture
 
 ![pic](/readme-imgs/charts.png)
 
@@ -20,11 +20,6 @@ The Auth server generates a web token that will be saved in the browser's localS
 
 
 # Notes (a.k.a. things I wont implement but that are good to know)
-
-## Actual software/hardware
-- HA Proxy: Load Balancer
-- Supervice: Restarts the server when it crashes
-- Amazon S3 / Google Cloud: Storage for static files
 
 ## DB replication lag
 Write to master, read from slaves... but make sure to cache the writtings in case the replication takes too long

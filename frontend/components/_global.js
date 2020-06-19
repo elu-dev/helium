@@ -1,5 +1,10 @@
+const user_token = localStorage.getItem('usrtk')
+
 export default status = {
-    user: 1,
+    user: {
+        token: user_token,
+        data: {}
+    },
     contentType: 'feed',
     posts: [
         {

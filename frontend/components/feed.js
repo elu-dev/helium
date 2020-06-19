@@ -17,7 +17,7 @@ export default class Feed extends React.Component {
         return (
             <div id="feed">
             {/* <button onClick={this.changer.bind(this)}>Do Something</button> */}
-            { STATE.user ? <NewPost /> : '' }
+            { STATE.user.token ? <NewPost /> : '' }
                 { STATE.posts.map(post => <Post userID={post.userID} imgURL={post.imgURL} comment={post.comment} />) }
             </div>
         )

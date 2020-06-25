@@ -1,17 +1,42 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
 
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded())
 
+app.post('/register', (req, res) => {
+    let { email, nickname, pwd } = req.body
+
+    if (false) { // check if user already in db
+        res.status(409).json({error: "Email already registered"})
+    } else {
+        bcrypt.hash(pwd, process.env.PWD_SALT, function(err, hash) {
+            if (err) {
+                console.log('AAAAAAAAAAAAA')
+            } else {
+                // save in db
+            }
+        })
+    }
+})
+
 app.post('/login', (req,res) => {
-    
-    let logged = false
+
+    let { email, pwd } = req.body
+
+    let hash; // get pwd from db
+
+    if(bcrypt.compareSync(pwd, hash)) {
+        // Passwords match
+    } else {
+        // Passwords don't match
+    }
 
     if (logged) {
-        jwt.sign({ user }, 'secretkey', (err, token) => {
+        jwt.sign({ user }, process.env.JWT_SALT, (err, token) => {
             if (err) res.send(err)
             else res.json({ token })
         })

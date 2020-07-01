@@ -1,11 +1,19 @@
 import React from 'react'
+import STATE from './_global'
 
 const Nav = props => (
-    <div id="nav">
-        <div className="blob">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima cumque nobis harum quibusdam perferendis? Aut voluptatem porro explicabo consequatur nulla accusantium, minus, quam dolor, vero quisquam repellat vitae sint.</p>
+    <div className="col-3 d-none d-md-block">
+        <div className="sticky-top h_stickfix">
+            <div className="blob h_nav">
+                {   STATE.user.token ? <div className="h_nav_row">Profile</div>
+                                     : <div className="h_nav_row">Register</div>
+                } {!STATE.user.token ? <div className="h_nav_row">Login</div> : ''}
+                
+                <div className="h_nav_row">Settings</div>
+            </div>
         </div>
     </div>
 )
+
 
 export default Nav

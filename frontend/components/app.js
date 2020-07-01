@@ -12,13 +12,12 @@ export default class App extends React.Component {
 
                 <Logo />
 
-                <div className="static-bar">
+                <div className="row">
                     <Nav />
+                    <Content />
                     <Trends />
-                </div>
 
-                <Content />
-                
+                </div>
             </div>
         )
     }

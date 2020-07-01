@@ -8,12 +8,11 @@ export default class Post extends React.Component {
 
     render() {
         return (
-            <div className="post">
-                <div className="blob">
-                    <img src={ this.props.imgURL } alt="picture"/>
-                    <h1> @{ this.props.userID } </h1>
-                    <p> { this.props.comment } </p>                
-                </div>
+            <div className="h_post">
+                <img src={ this.props.imgURL } alt="post_picture" />
+                <h1> @{ this.props.userID } </h1>
+                <p> { this.props.comment } </p>
+                <div className="h_p_likes"> &lt;3 5 </div>
             </div>
         )
     }

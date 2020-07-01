@@ -9,8 +9,10 @@ export default class Content extends React.Component {
 
     render() {
         return (
-            <div id="content">
-                { STATE.contentType == 'feed' ? <Feed /> : '' }
+            <div className="col-12 col-md-9 col-lg-6">
+                <div className="h_stickfix">
+                    { STATE.contentType == 'feed' ? <Feed /> : '' }
+                </div>
             </div>
         )
     }

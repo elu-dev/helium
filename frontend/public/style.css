@@ -1,17 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap);
-
-html, body {
-    /* color: #428989; */
-    color: #873b91;
-    margin: 0;
-    padding: 0;
-    font-family: Raleway, Helvetica;
-    overflow-x: hidden;
-}
-
 
 #bg {
-    /* background-image: linear-gradient(-45deg,#8EDFFF, #BEFDF9); */
     background: #03001e;  /* fallback for old browsers */
     background: -webkit-linear-gradient(135deg, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(135deg, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -23,135 +11,101 @@ html, body {
     z-index: -2;
 }
 
-p {
-    margin: 0;
-}
+#logo { margin: 10px 0 }
 
-
-#logo {
-    position:relative;
-    width:100%;
-    text-align: center;
-    padding: 10px 0;
-}
 #logo span {
-    /* color: #428989; */
-    color: #fffe;
-    font-size: 3em;
-    letter-spacing: 1em;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 0.5em;
+    text-shadow: 0 0 20px #0007;
 }
+
 #logo img {
-    font-size: 3em;
-    height: 1.2em;
-    width: auto;
-    margin-right: 0.9em;
     position: relative;
-    top: 0.2em;
-}
-
-
-.container {
-    /* background-color: #fff; */
-    margin: 0 auto;
-    width: min(60em, 100vw);
-}
-
-.static-bar {
-    margin: 0 auto;
-    position: fixed;
-    width: calc(min(60em, 100vw));
-    overflow: hidden;
-    padding: 10px 0;
-    z-index: -1;
+    bottom: 10px;
+    padding-right: 0.5em;
+    width: 4em;
 }
 
 .blob {
-    margin: 0 auto;
-    width: calc(100% - 30px);
-    background-color: #fffc;
-    border-radius: 10px;
+    background-color: #fffB;
     padding: 10px;
-    position: relative;
-    box-shadow: 0 0 10px #0003;
+    box-shadow: 0 0 20px #0003;
+    border-radius: 2px;
+    transition: box-shadow 0.25s;
 }
 
-
-
-#nav {
-    position: relative;
-    float: left;
-    width: min(20%, 224px);
+.blob:hover {
+    box-shadow: 0 0 20px #0006;
 }
 
-#content {
-    width: 60%;
-    margin: 10px auto;
+.h_stickfix {
+    padding-top: 10px;
 }
 
-.post .blob:hover {
-    background-color: white;
+.h_nav_row {
+    font-size: 1.3em;
+    color: #333;
+    padding: 5px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.h_nav_row:hover {
+    color: #555;
+    background-color: #fff4;
     cursor: pointer;
 }
 
-#trends {
-    float: right;
-    width: min(20%, 224px);
+.h_feed {
+    font-size: 1.3em;
+    color: #333;
 }
 
-@media screen and (max-width: 700px) {
-    #logo {
-        font-size: 9px;
-    }
-
-    #nav { width: 30% }
-    #content { width: calc(70% - 15px); margin-left: 30%; }
-    #trends { display: none }
-}
-
-.post {
-    color: black;
-}
-
-.post h1 {
-    margin: 0;
-    margin-bottom: 10px;
-}
-
-.post img {
+.h_post img {
     width: 100%;
-    border-radius: 10px;
 }
 
-.post p {
-    padding-left: 10px;
+.h_post p {
+    margin-bottom: 0;
 }
 
-#feed .post~.post {
-    margin-top: 5px;
-}
-
-#newpost {
+.h_p_likes {
     margin-bottom: 10px;
-    display: flex;
 }
 
-
-#newpost input {
-    flex-grow: 7;
-    background-color: #fffc;
-    padding: 5px;
-    border: 0px;
-    border-radius: 5px 0 0 5px;
+footer {
+    color: #fffB;
+    text-align: center;
 }
 
-#newpost button {
-    flex-grow: 3;
-    border: 0px;
-    border-radius: 0 5px 5px 0;
-    background: linear-gradient(45deg,  #ec38bc, #7303c0);
-    color: white;
+.h_post:nth-child(n+2) {
+    padding-top: 20px;
+    border-top: 1px solid #0003;
 }
 
-#newpost input:focus { outline: none }
-#newpost button:focus { outline: none }
-#newpost button:hover { background: linear-gradient(45deg,  #ec38bccc, #7303c0cc); cursor: pointer }
+.h_trends {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.h_trends_h {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.h_trends_row {
+    margin-left: 10px;
+    color: #9e04ff;
+    text-decoration: underline;
+}
+
+.h_trends_row:hover {
+    cursor: pointer;
+    color: #ea04ff;
+}
+
+@media only screen and (max-width: 600px) {
+    #logo { font-size: 3vw }
+    #logo span { font-size: 3em }
+    #logo img { bottom: 0.7em }
+}

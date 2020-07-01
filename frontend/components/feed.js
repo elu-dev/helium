@@ -15,9 +15,8 @@ export default class Feed extends React.Component {
 
     render() {
         return (
-            <div id="feed">
-            {/* <button onClick={this.changer.bind(this)}>Do Something</button> */}
-            { STATE.user.token ? <NewPost /> : '' }
+            <div className="blob h_feed">
+                { STATE.user.token ? <NewPost /> : '' }
                 { STATE.posts.map(post => <Post userID={post.userID} imgURL={post.imgURL} comment={post.comment} />) }
             </div>
         )

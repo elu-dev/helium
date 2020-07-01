@@ -10,12 +10,17 @@ export default status = {
         {
             userID: "test",
             imgURL: "http://localhost:3001/img/test.jpg",
-            comment: "Moonlit Night <3"
+            comment: "Moon \\o/"
         },
         {
             userID: "test",
             imgURL: "http://localhost:3001/img/test.jpg",
-            comment: "Moonlit Night <3"
+            comment: "Moon \\o/"
+        },
+        {
+            userID: "test",
+            imgURL: "http://localhost:3001/img/test.jpg",
+            comment: "Moon \\o/"
         }
     ]
 }

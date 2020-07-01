@@ -1,26 +1,20 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+const queries = require('./queries')
 
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded())
 
-app.post('/register', (req, res) => {
+app.post('/register', async (req, res) => {
     let { email, nickname, pwd } = req.body
+    const qresult = await queries.registerUser(nickname, email, pwd)
 
-    if (false) { // check if user already in db
-        res.status(409).json({error: "Email already registered"})
-    } else {
-        bcrypt.hash(pwd, process.env.PWD_SALT, function(err, hash) {
-            if (err) {
-                console.log('AAAAAAAAAAAAA')
-            } else {
-                // save in db
-            }
-        })
-    }
+    if (qresult.error) console.log(qresult.error)
+    else res.sendStatus(qresult.status)
+    
 })
 
 app.post('/login', (req,res) => {

@@ -13,12 +13,6 @@ const pool = new pg.Pool({
 
 const query = promisify(pool.query).bind(pool);
 
-async function getUser(name) {
-    let pass = await query(`SELECT * FROM users WHERE nickname = '${name}'`)
-    pool.end()
-    return pass.rows
-}
-
 async function registerUser(name, email, pwd) {
     let qresult = await query(`SELECT password FROM users WHERE email = '${email}'`)
     
@@ -35,11 +29,13 @@ async function registerUser(name, email, pwd) {
 
     
     if (qresult.rows.length) {
-        console.log('AAAAAAAAAAAAAAAAAAA')
+        return {error:'couldn\'t register the user'}
     }
 
     pool.end()
+    return {status: 200}
 }
 
-registerUser('paco', 'paco@paco.com', 'paco').then(console.log)
-
+module.exports = {
+    registerUser
+}

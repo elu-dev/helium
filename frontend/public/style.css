@@ -40,7 +40,7 @@
 }
 
 .h_stickfix {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .h_nav_row {
@@ -109,3 +109,4 @@ footer {
     #logo span { font-size: 3em }
     #logo img { bottom: 0.7em }
 }
+

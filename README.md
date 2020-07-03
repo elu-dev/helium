@@ -5,9 +5,9 @@ Social network structured as a set of micro-services
 Topics I want to cover:
 - Microservice Architecture `(picture below)` - ✔️ Done ✔️
 - API Authentication `(jwt)` - 🚧 WIP 🚧
-- Cache `(redis)` - 🚧 WIP 🚧
-- Testing `(jest)` - 🚧 WIP 🚧
-- Scalability `(docker + kubernetes)` - 🚧 WIP 🚧
+- Cache `(postgreSQL + redis)` - 🚧 WIP 🚧
+- Testing `(jest)` - 🔜 TODO 🔜
+- Scalability `(docker + kubernetes)` - 🔜 TODO 🔜
 
 
 ## Architecture

@@ -19,6 +19,11 @@ export default status = {
         },
         {
             userID: "test",
+            imgURL: "",
+            comment: "YAAAAY"
+        },
+        {
+            userID: "test",
             imgURL: "http://localhost:3001/img/test.jpg",
             comment: "Moon \\o/"
         }
